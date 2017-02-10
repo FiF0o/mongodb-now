@@ -31,3 +31,6 @@ Debugging code when deploying to view source code
 DNS
 - Go to [https://zeit.co/world](https://zeit.co/world) to get the IP DNS of Zeit.co to map to your provider nameservers DNS when you create your own nameservers with your provider
 - Once your <domain name(s)> are confirmed by your provider you can `alias` it, e.g. `now alias <now-commit-url-deployed> <domain name(s)>`
+
+Deploying with mongodb
+- Don't forget to pass in your `USER_DB` and `USER_PW` encrypting them `@user_db`, `@user_pw` with now when deploying
