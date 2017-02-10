@@ -4,9 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "//": "Runs now-start instead of start when deployed with now",
-    "now-start": "node ./bin/www",
     "//": "use now --static to force deploying/serving static assets",
+    "now-start": "node ./bin/www",
     "serve-static": "cd public && ./node_modules/.bin/now"
   },
   "dependencies": {
@@ -20,6 +19,7 @@
   },
   "devDependencies": {
     "dotenv": "4.0.0",
+    "mongodb": "2.2.22",
     "now": "4.2.2"
   }
 }
