@@ -1,5 +1,8 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1= data
+  h2 Welcome to #{data}
+  p some text returned from the database: #{something}
+  p and its timestamp: #{timestamp}
+  p the page has been visited #{result} times!

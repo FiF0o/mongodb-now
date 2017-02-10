@@ -1,23 +1,22 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
-/*router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});*/
 var database = require('../database');
 
+/* GET home page. */
 router.get('/', function(req, res, next) {
-
-  var something = 'some data'
-  var timestamp = new Date().toISOString()
+  var something = 'some data'; // can use GET from req.params
+  var timestamp = new Date().toISOString();
 
   // pass in data to be given in the callback
   database.logReq(something, timestamp, function(err, result) {
-    // returns the template with the data from our database
-    res.send('<h1>'+something+'<h1><br><h2>'+timestamp+'<h2>')
+    /**
+     * sends the template with the data from our database after db manipulation is done,
+     * result is finally returned from the cb.
+     */
+    res.render('index', { data: 'Express',  something: something, timestamp: timestamp, result: result });
   })
-
 });
+
 
 module.exports = router;
